@@ -17,11 +17,11 @@ public class Cuenta {
 	}
 	
 	public void ingresar(double x) {
-		this.saldo=25;
+		this.saldo+=x;
 	}
 	
 	public void retirar(double x) {
-		this.saldo=0;
+		this.saldo-=x;
 	}
 
 }
