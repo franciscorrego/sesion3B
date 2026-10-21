@@ -41,12 +41,17 @@ class Test0014 {
 	
 	@Test
 	void test0014() {
-		cuenta12345.retirar(200);
-		cuenta67890.retirar(350);
-		cuenta12345.ingresar(100);
-		cuenta67890.retirar(200);
-		cuenta67890.retirar(150);
-		cuenta12345.retirar(200);
+		cuenta12345.retirar(200);  
+		cuenta67890.retirar(350);  
+		cuenta12345.ingresar(100); 
+		cuenta67890.retirar(200); 
+		cuenta67890.retirar(150);  
+		cuenta12345.retirar(200);   
+		cuenta67890.ingresar(50);  
+		cuenta67890.retirar(100);   
+		
+		assertEquals(-250.0, cuenta12345.getSaldo(), "saldo de la cuenta 12345 -250€");
+		assertEquals(-450.0, cuenta67890.getSaldo(), "saldo de la cuenta 67890 -450€");
 	}
 
 }
